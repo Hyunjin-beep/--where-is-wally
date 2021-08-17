@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Where's Wally?</title>
+    <script
+      src="https://kit.fontawesome.com/9eb162ac0d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="src/main.js" defer></script>
+  </head>
+  <body>
+    <div class="game_header">
+      <header>
+        <button class="game_play"><i class="far fa-play-circle"></i></button>
+        <span class="level">Level 01</span>
+        <span class="timer">00:00</span>
+        <button class="game_stop"><i class="fas fa-stop"></i></button>
+      </header>
+    </div>
+    <div class="game_field">
+      <img src="plan/img1.jpg" alt="" class="game_img" />
+      <div class="wally_location">wally</div>
+    </div>
+    <div class="game_result">
+      <div class="game_fail">
+        <button class="redo"><i class="fas fa-redo"></i></button>
+        <span class="game_fail_message">You Failed</span>
+      </div>
+
+      <div class="game_success">
+        <button class="redo"><i class="fas fa-redo"></i></button>
+        <button class="nextLevel"><i class="fas fa-arrow-right"></i></button>
+        <span class="game_success_message">You Found!</span>
+      </div>
+    </div>
+  </body>
+</html>
