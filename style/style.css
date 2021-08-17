@@ -1,0 +1,136 @@
+:root {
+  /*color*/
+  --carrot-color: rgb(255, 157, 0);
+  --black-color: #140a00;
+  --blue-color: #045fd4;
+  --red-color: #ff0000;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+
+  /*Size*/
+  --padding: 12px;
+
+  /*Font size*/
+  --font-large: 20px;
+  --font-regular: 16px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+
+  /*animation*/
+  --animation-duration: 300ms;
+}
+
+body {
+  text-align: center;
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: var(--grey-dark-color);
+}
+
+button {
+  background-color: var(--carrot-color);
+  border-radius: 10px;
+  border: 3px solid var(--black-color);
+  outline: transparent;
+  width: 50px;
+  height: 50px;
+  transition: transform var(--animation-duration) ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+button i {
+  font-size: 25px;
+}
+
+/*game_header*/
+.game_header {
+  width: 400px;
+  position: absolute;
+  top: 20px;
+}
+
+.game_header header {
+  border: 3px solid var(--black-color);
+  background-color: rgba(240, 201, 73, 0.459);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game_header header .timer,
+.game_header header .level {
+  font-size: 30px;
+  border: 4px solid var(--black-color);
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: blanchedalmond;
+}
+
+/*game_field*/
+.game_field {
+  position: relative;
+  z-index: -1;
+}
+
+.game_field img {
+  max-width: 80%;
+  height: 85%;
+  width: auto\9; /* ie8 */
+}
+
+.game_field .wally_location {
+  border: 7px solid gold;
+  width: 25px;
+  height: 70px;
+
+  position: absolute;
+  top: 47%;
+  left: 28%;
+}
+
+/*game_result*/
+.game_result {
+  border: 3px solid var(--black-color);
+  background-color: rgba(99, 98, 96, 0.459);
+  border-radius: 25px;
+  width: 400px;
+}
+
+.game_fail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game_success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game_result span {
+  font-size: 35px;
+  border: 4px solid var(--black-color);
+  margin: 10px 0px;
+  padding: 5px 10px;
+  background-color: blanchedalmond;
+}
+
+.game_fail,
+.game_success {
+  margin-top: 10px;
+}
