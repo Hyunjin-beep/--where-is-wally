@@ -16,15 +16,8 @@ let leftTime;
 let gameFlag = false;
 
 starting_btn.addEventListener("click", () => {
-  gameFlag = true;
-  if (gameFlag === true) {
-    startTimer();
-    startingGame();
-  } else {
-    game_img.addEventListener("click", function (event) {
-      event.preventDefault();
-    });
-  }
+  startTimer();
+  startingGame();
 });
 
 game_img.addEventListener("click", () => {
@@ -34,22 +27,6 @@ game_img.addEventListener("click", () => {
 wally_location.addEventListener("click", () => {
   showingMsg("win");
 });
-
-function successGame() {
-  game_result.style.display = "block";
-  game_msg_fail.style.display = "none";
-  game_msg_success.style.display = "block";
-  game_msg_success.style.paddingBottom = "20px";
-
-  stopTimer();
-  gameFlag = false;
-}
-
-function failingGame() {
-  game_result.style.display = "block";
-  stopTimer();
-  gameFlag = false;
-}
 
 function showingMsg(result) {
   if (result === "fail") {
@@ -74,6 +51,8 @@ function startingGame() {
   game_header.style.width = "250px";
   game_header.style.transform = "translate(-620px,-15px)";
 
+  game_img.style.display = "block";
+  wally_location.style.display = "block";
   gameFlag = true;
 }
 
