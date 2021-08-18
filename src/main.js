@@ -51,8 +51,8 @@ function startingGame() {
   game_header.style.width = "250px";
   game_header.style.transform = "translate(-620px,-15px)";
 
-  game_img.style.display = "block";
-  wally_location.style.display = "block";
+  game_field.style.display = "block";
+
   gameFlag = true;
 }
 
