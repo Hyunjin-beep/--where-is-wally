@@ -67,6 +67,11 @@ button i {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.game_header header .timer {
+  display: none;
 }
 
 .game_header header .timer,
