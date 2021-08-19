@@ -45,9 +45,9 @@ game_redo_btn_a.addEventListener("click", (event) => {
   // console.log(event.currentTarget);
 });
 
-game_nextLevel_btn.addEventListener("click", () => {
-  location.href = "../next/levelTwo.html";
-});
+// game_nextLevel_btn.addEventListener("click", () => {
+//   location.href = "../next/levelTwo.html";
+// });
 
 function reStart() {
   gameFlag = true;

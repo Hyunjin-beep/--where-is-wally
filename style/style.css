@@ -130,6 +130,10 @@ button i {
   padding-bottom: 20px;
 }
 
+.nextLevel a i {
+  color: black;
+}
+
 .game_success_btn {
   margin-bottom: 30px;
 }
