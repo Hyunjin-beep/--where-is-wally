@@ -10,6 +10,8 @@ const game_img = document.querySelector(".game_img");
 const game_result = document.querySelector(".game_result");
 const game_msg_fail = document.querySelector(".game_fail");
 const game_msg_success = document.querySelector(".game_success");
+const game_redo_btn = document.querySelector(".redo");
+const game_redo_btn_a = document.querySelector(".redo_a");
 
 let startingTimer;
 let leftTime;
@@ -28,19 +30,30 @@ wally_location.addEventListener("click", () => {
   showingMsg("win");
 });
 
-function showingMsg(result) {
-  if (result === "fail") {
-    game_result.style.display = "block";
-  } else if (result === "win") {
-    game_result.style.display = "block";
-    game_msg_fail.style.display = "none";
-    game_msg_success.style.display = "block";
-    game_msg_success.style.paddingBottom = "20px";
-  } else {
-    console.log("not valid result");
-  }
-  stopTimer();
-  gameFlag = false;
+game_redo_btn.addEventListener("click", (event) => {
+  reStart();
+  console.log(gameFlag);
+  // console.log(event.target);
+  // console.log(event.currentTarget);
+});
+
+game_redo_btn_a.addEventListener("click", (event) => {
+  reStart();
+  console.log(gameFlag);
+  // console.log(event.target);
+  // console.log(event.currentTarget);
+});
+
+function reStart() {
+  gameFlag = true;
+  hideMsg();
+  startTimer();
+}
+
+function hideMsg() {
+  game_result.style.display = "none";
+  game_msg_fail.style.display = "";
+  game_msg_success.style.display = "";
 }
 
 function startingGame() {
@@ -57,7 +70,6 @@ function startingGame() {
 }
 
 function finishGame() {
-  timer.style.display = "none";
   starting_btn.style.display = "block";
   stop_btn.style.display = "none";
   gameFlag = false;
@@ -70,9 +82,10 @@ function startTimer() {
 }
 
 function countDown() {
-  if (leftTime === -1) {
+  if (leftTime === 0) {
     clearInterval(startingTimer);
     timer.innerHTML = "00:00";
+    showingMsg("fail");
     finishGame();
   } else {
     timer.innerHTML = `00:${leftTime < 10 ? `0${leftTime}` : leftTime}`;
@@ -83,4 +96,18 @@ function countDown() {
 function stopTimer() {
   clearInterval(startingTimer);
   timer.innerHTML = `00:${leftTime < 10 ? `0${leftTime}` : leftTime}`;
+}
+
+function showingMsg(result) {
+  if (result === "fail") {
+    game_result.style.display = "block";
+    game_msg_success.style.display = "none";
+  } else if (result === "win") {
+    game_result.style.display = "block";
+    game_msg_fail.style.display = "none";
+  } else {
+    console.log("not valid result");
+  }
+  stopTimer();
+  gameFlag = false;
 }
