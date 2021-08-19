@@ -94,7 +94,7 @@ button i {
   width: auto\9; /* ie8 */
 }
 
-.wally_location {
+/* .wally_location {
   border: 7px solid gold;
   width: 25px;
   height: 70px;
@@ -102,7 +102,7 @@ button i {
   position: absolute;
   top: 47%;
   left: 28%;
-}
+} */
 
 /*game_result*/
 .game_result {

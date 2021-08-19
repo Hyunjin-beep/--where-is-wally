@@ -12,6 +12,7 @@ const game_msg_fail = document.querySelector(".game_fail");
 const game_msg_success = document.querySelector(".game_success");
 const game_redo_btn = document.querySelector(".redo");
 const game_redo_btn_a = document.querySelector(".redo_a");
+const game_nextLevel_btn = document.querySelector(".nextLevel");
 
 let startingTimer;
 let leftTime;
@@ -42,6 +43,10 @@ game_redo_btn_a.addEventListener("click", (event) => {
   console.log(gameFlag);
   // console.log(event.target);
   // console.log(event.currentTarget);
+});
+
+game_nextLevel_btn.addEventListener("click", () => {
+  location.href = "../next/levelTwo.html";
 });
 
 function reStart() {

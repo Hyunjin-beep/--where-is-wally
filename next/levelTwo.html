@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Where's Wally?</title>
+    <script
+      src="https://kit.fontawesome.com/9eb162ac0d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../style/style.css" />
+    <script src="../src/main.js" defer></script>
+  </head>
+  <style>
+    .wally_location {
+      width: 20px;
+      height: 40px;
+
+      position: absolute;
+      top: 32%;
+      left: 31%;
+    }
+  </style>
+  <body>
+    <div class="game_header">
+      <header>
+        <button class="game_play"><i class="far fa-play-circle"></i></button>
+        <button class="game_stop" style="display: none">
+          <i class="fas fa-stop"></i>
+        </button>
+        <span class="level" style="margin-bottom: 10px">Level 02</span>
+        <span class="timer" style="margin-bottom: 10px"></span>
+      </header>
+    </div>
+
+    <div class="game_field" style="display: none">
+      <img src="../plan/img2.jpg" alt="" class="game_img" />
+      <div class="wally_location"></div>
+    </div>
+
+    <div class="game_result" style="display: none">
+      <div class="game_fail">
+        <button class="redo"><i class="fas fa-redo"></i></button>
+        <span class="game_fail_message">You Failed</span>
+      </div>
+      <div class="game_success">
+        <div class="game_success_btn">
+          <button class="redo_a"><i class="fas fa-redo"></i></button>
+          <button class="nextLevel">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+        <span class="game_success_message">You Found!</span>
+      </div>
+    </div>
+  </body>
+</html>
