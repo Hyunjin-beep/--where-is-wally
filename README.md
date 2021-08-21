@@ -1,4 +1,4 @@
-# TITLE: --where-is-wally
+# TITLE: Where is Wally
 ### URL: https://hyunjin-beep.github.io/--where-is-wally/
 # Languages: HTML, CSS, JavaScript
 
