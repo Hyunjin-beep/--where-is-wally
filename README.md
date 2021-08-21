@@ -164,6 +164,9 @@ This project has three structures.
 
 ## 4. References
 STUDY NOTE: https://indecisive-durian-7f7.notion.site/where-is-wally-dev-notes-04b71cdabb59483094cf03a90fad3e09
+
 MDN site: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
 absolute, relative and others: https://stackoverflow.com/questions/18339549/floating-div-over-an-image
+
 
