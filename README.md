@@ -32,7 +32,10 @@ This project has three structures.
   - Success or Fail message
 
   ---------------------------------------
+  
   * Header
+  ![Screenshot (102)](https://user-images.githubusercontent.com/64330888/130328698-e829e8fc-d9a2-49f9-973b-10f291fd3e94.png)
+
   ```
   <div class="game_header">
       <header>
@@ -47,6 +50,8 @@ This project has three structures.
   ```
   
   When users first load it, it will show only start button and level. After starting the game, the header will moved to side for entire game image while the starting button is replaced by a puase button and the timer is starting to count.
+  
+  ![Screenshot (100)](https://user-images.githubusercontent.com/64330888/130328614-9e31fb42-9f10-40c0-8cd4-d13b7ae7a2d8.png)
   
   ```
   starting_btn.addEventListener("click", () => {
@@ -113,6 +118,9 @@ This project has three structures.
 ---------------------------------------
    
   * Success or Fail message
+  ![Screenshot (105)](https://user-images.githubusercontent.com/64330888/130328737-7d309c30-e563-47a8-af7a-bde91f1c2706.png)
+  ![Screenshot (106)](https://user-images.githubusercontent.com/64330888/130328741-cf599b18-d7c0-4e1a-b969-091db5b0ec3d.png)
+
   ```
   <div class="game_result" style="display: none">
       <div class="game_fail">
