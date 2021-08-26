@@ -10,8 +10,7 @@ const game_img = document.querySelector(".game_img");
 const game_result = document.querySelector(".game_result");
 const game_msg_fail = document.querySelector(".game_fail");
 const game_msg_success = document.querySelector(".game_success");
-const game_redo_btn = document.querySelector(".redo");
-const game_redo_btn_a = document.querySelector(".redo_a");
+const game_redo_btns = document.querySelectorAll(".redo");
 const game_nextLevel_btn = document.querySelector(".nextLevel");
 
 let startingTimer;
@@ -31,23 +30,14 @@ wally_location.addEventListener("click", () => {
   showingMsg("win");
 });
 
-game_redo_btn.addEventListener("click", (event) => {
-  reStart();
-  console.log(gameFlag);
-  // console.log(event.target);
-  // console.log(event.currentTarget);
+game_redo_btns.forEach((game_redo_btn) => {
+  game_redo_btn.addEventListener("click", (event) => {
+    reStart();
+    console.log(gameFlag);
+    // console.log(event.target);
+    // console.log(event.currentTarget);
+  });
 });
-
-game_redo_btn_a.addEventListener("click", (event) => {
-  reStart();
-  console.log(gameFlag);
-  // console.log(event.target);
-  // console.log(event.currentTarget);
-});
-
-// game_nextLevel_btn.addEventListener("click", () => {
-//   location.href = "../next/levelTwo.html";
-// });
 
 function reStart() {
   gameFlag = true;
